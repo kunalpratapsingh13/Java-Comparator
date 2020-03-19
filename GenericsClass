@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class PairOne <T> {
+    <T> one;
+    <T> two;
+}
+
+public class PairTwo <K, V> {
+    <K> one;
+    <V> two;
+}
+
+public class Client {
+    
+    public static void main(String[]args){
+        PairOne<String> p1 = new PairOne<>();
+        p1.one = "abc";
+        p1.two = "def";
+        
+        PairTwo<Integer, String> p2 = new PairTwo<>();
+        p2.one = 10;
+        p2.two = "xyz" ;
+    }
+}
