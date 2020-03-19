@@ -30,4 +30,23 @@ public class Generics {
         }
       }
     }
+    
+    Limitations of using 'extends Comparable <T>':
+    1. We can only use one logic at a time. Be it speed, color or price. Only one of these can be used at a time.
+    2. If we forget to add 'implements comparable' and share the code with the client. We cannot make changes to code now.
+       Hence we use Comparator.
+       
+    //BubbleSort code using comparator
+    public static <T> void bubbleSort(T[], Comparator <T> comparator1){
+      for(int counter=0;counter<arr.length-1;counter++){
+        for(int j=0;j<arr.length-counter-1;j++){
+          if (comparator1.compare(arr[j],arr[j+1]) > 0){
+            T temp = arr[j];
+            arr[j] = arr[j+1];
+            arr[j+1] = temp;
+          }
+        }
+      }
+    }
+    
  }
