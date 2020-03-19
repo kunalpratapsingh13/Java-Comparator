@@ -20,5 +20,13 @@ public class Car implements Comparable <Car> {      'implements Comoparable <T>'
   //condition of BubbleSort. Here the Car objects will be sorted on the basis of their speeds.
   public int compareTo(Car other) {     
    return this.speed - other.speed;     
-   }                                    
+   }             
+   
+   //A similar code can be written for comparing on the basis of price, but not for color. In that case, we rely on the default compareTo
+   //function of the object class to sort color on the basis of lexographical order.
+   // In order to implement the following code, implement the previous compareTo code
+  public int compareTo(Car other){
+    return this.color.compareTo(other.color);
+  }
+  
 }
