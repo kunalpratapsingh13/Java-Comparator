@@ -1,0 +1,6 @@
+import java.util.Comparator;  
+public class CarPriceComparator implements Comparator<Car> {    //implements Comparator <T> is required
+  public int compare (Car tcar, Car ocar){
+    return ocar.price - tcar.price;             //Here the priority changes. Lesser the price, higher is the priority.
+  }
+}
