@@ -1,0 +1,19 @@
+public class Car implements Comparable <Car> {      'implements Comoparable <T>' is important in order to use properties of Comparable
+  public int speed;
+  public int price;
+  public String Color;
+  
+  public Car (int speed, int price, String color){      //Constructor to initialize Car object with the given specs
+   this.speed = speed;
+   this.price = price;
+   this.color = color;
+  }
+   
+  public String toString(){                                               //Every class is a child of Object class by default. So we are 
+   return "S: " + this.speed + "P: " + this.price + "C: " + this.color;   //overriding the toString function of Object class , so that we
+  }                                                                       //can print Car specs as the generic variable while using syso.
+  
+  public int compareTo(Car other) {     //Again, we are overriding the Compare function of the Object class so as to compare between two
+   return this.speed - other.speed;     //objects of Car class while using BubbleSort. Here the Car objects will be sorted on the basis of 
+   }                                    // their speeds. 
+}
