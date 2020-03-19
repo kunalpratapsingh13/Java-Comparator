@@ -9,11 +9,16 @@ public class Car implements Comparable <Car> {      'implements Comoparable <T>'
    this.color = color;
   }
    
-  public String toString(){                                               //Every class is a child of Object class by default. So we are 
-   return "S: " + this.speed + "P: " + this.price + "C: " + this.color;   //overriding the toString function of Object class , so that we
-  }                                                                       //can print Car specs as the generic variable while using syso.
+ //Every class is a child of Object class by default. So we are overriding the toString function of Object class , so that we 
+ //can print Car specs as the generic variable while using syso. Syso cannot print classes like simple variables. It follows the toString 
+ //function of Object Class (Parent Class). Hence we are overriding it in our Car Class(Child Class) so as to get our desired output.
+ public String toString(){                                               
+   return "S: " + this.speed + "P: " + this.price + "C: " + this.color;   
+  }                                                                      
   
-  public int compareTo(Car other) {     //Again, we are overriding the Compare function of the Object class so as to compare between two
-   return this.speed - other.speed;     //objects of Car class while using BubbleSort. Here the Car objects will be sorted on the basis of 
-   }                                    // their speeds. 
+  //Again, we are overriding the Compare function of the Object class so as to compare between two objects of Car class in the if
+  //condition of BubbleSort. Here the Car objects will be sorted on the basis of their speeds.
+  public int compareTo(Car other) {     
+   return this.speed - other.speed;     
+   }                                    
 }
